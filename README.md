@@ -16,5 +16,24 @@ This project is actively evolving with several exciting features in development:
 - Real-time collaboration features
 - Enhanced metadata extraction
 
+## Architecture
+
+```mermaid
+graph TD
+    A[Upload Service] --> B[Document Parser]
+    B --> C[AI Analysis]
+    A --> D[Cloud Storage]
+    C --> E[Metadata Store]
+    D --> F[Search Engine]
+    E --> F
+    
+    classDef primary fill:#4285F4,stroke:#0D47A1,color:white
+    classDef storage fill:#34A853,stroke:#0D652D,color:white
+    classDef processing fill:#FBBC05,stroke:#E37400,color:white
+    
+    class A,F primary
+    class D,E storage
+    class B,C processing
+
 ## Getting Started
 > Setup instructions coming soon as we stabilize the initial architecture
